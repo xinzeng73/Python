@@ -1,0 +1,67 @@
+
+>>> x=0b11111111111111111111111111111101
+>>> type(x)
+<class 'int'>
+>>> print(x)
+4294967293
+>>> print(int(x))
+4294967293
+>>> 
+
+>>> x='0b11111111111111111111111111111101'
+>>> type(x)
+<class 'str'>
+>>> print(x)
+0b11111111111111111111111111111101
+>>> print(int(x))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '0b11111111111111111111111111111101'
+>>> print(int(x,0))
+4294967293
+>>> print(int(x,2))
+4294967293
+>>> 
+
+#Hexadecimal
+
+>>> x=0xbeef101
+>>> type(x)
+<class 'int'>
+>>> print(x)
+200208641
+>>> 
+
+>>> x='0xbeef101'
+>>> type(x)
+<class 'str'>
+>>> print(x)
+0xbeef101
+>>> print(int(x))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '0xbeef101'
+>>> print(int(x,0))
+200208641
+>>> print(int(x,16))
+200208641
+>>> print(int(x,2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 2: '0xbeef101'
+>>> 
+
+>>> x='0o10'
+>>> type(x)
+<class 'str'>
+>>> print(x)
+0o10
+>>> print(int(x))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '0o10'
+>>> print(int(x,0))
+8
+>>> print(int(x,8))
+8
+>>> 
